@@ -59,7 +59,7 @@ class LinkedList {
 
     while (currentNode.next) {
       newTail = currentNode;
-      currentNode = newNode.next;
+      currentNode = currentNode.next;
     }
 
     this.tail = newTail;
@@ -79,7 +79,7 @@ class LinkedList {
     if (!this.head) return undefined;
     const currentHead = this.head;
     this.head = currentHead.next;
-    this.length++;
+    this.length--;
 
     if (this.length === 0) {
       this.tail = null;
